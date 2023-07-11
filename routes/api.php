@@ -1,12 +1,12 @@
 <?php
 
+use App\Mail\AuthMail;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
-use App\Mail\AuthMail;
-use Illuminate\Support\Facades\Mail;
 use App\Http\Controllers\AuthMailController;
-
+use App\Http\Controllers\PasswordResetController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,4 +26,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::post('register', [UserController::class, 'register']);
 Route::post('login', [UserController::class, 'login']);
 
-Route::get('send-mail', [AuthMailController::class, 'send_email']);
+Route::post('send-mail', [UserController::class, 'send_email']);
+
+Route::post('passwordreset', [PasswordResetController::class, 'reset']);
+
+
+Route::post('analysis', [UserController::class, 'analysis']);

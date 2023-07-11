@@ -15,42 +15,27 @@ class AuthMail extends Mailable
 {
     use Queueable, SerializesModels;
 
+    public $mailData;
+
     /**
      * Create a new message instance.
      */
-    public function __construct()
+    public function __construct($mailData)
     {
-        //
+        $this->mailData = $mailData;
     }
-
-    /**
-     * Get the message envelope.
-     */
-    public function envelope(): Envelope
-    {
-        return new Envelope(
-            from: new Address('ZenZoneApplication@gmail.com','Test Sender'),
-            subject: 'Auth Mail',
-        );
-    }
-
-    /**
-     * Get the message content definition.
-     */
-    public function content(): Content
-    {
-        return new Content(
-            view: 'AuthMail.blade.php',
-        );
-    }
-
-    /**
-     * Get the attachments for the message.
+ /**
+     * Build the message.
      *
-     * @return array<int, \Illuminate\Mail\Mailables\Attachment>
+     * @return $this
      */
-    public function attachments(): array
-    {
-        return [];
-    }
+    public function build()
+{
+    $resetToken = $this->mailData['resetToken'];
+    $resetUrl = url('/password/reset', $resetToken);
+
+    return $this->subject('WELCOME TO ZENZONE!')
+                ->view('emails.ResetMail')
+                ->with('resetUrl', $resetUrl);
+}
 }

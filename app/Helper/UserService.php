@@ -18,25 +18,32 @@ class UserService{
     }
 
     public function validateInput($auth=false)
-    {
-        $validationRule = $auth ? 'exists:users' : 'unique:users';
-        $validator = Validator::make(
-            ['email' => $this->email, 'password'=>$this->password],
-        [
+{
+    $validationRule = $auth ? 'exists:users' : 'unique:users';
+
+    if ($auth) {
+        // If user is trying to login, only check that email and password are not empty
+        $rules = [
             'email' => ['required', 'email:rfc,dns', $validationRule],
-            'password' => ['required', 'string' , Password::min(8)->letters()->numbers()->mixedCase()]
-        ]
-        );
-
-        if($validator->fails())
-        {
-            return['status' => false, 'messages' =>$validator->messages()];
-        }
-        else{
-            return['status' => true];
-        }
-
+            'password' => ['required', 'string'],
+        ];
+    } else {
+        // If user is trying to sign up, apply all password validation rules
+        $rules = [
+            'email' => ['required', 'email:rfc,dns', $validationRule],
+            'password' => ['required', 'string', Password::min(8)->letters()->numbers()->mixedCase()],
+        ];
     }
+
+    $validator = Validator::make(['email' => $this->email, 'password' => $this->password], $rules);
+
+    if ($validator->fails()) {
+        return ['status' => false, 'messages' => $validator->messages()];
+    } else {
+        return ['status' => true];
+    }
+}
+
 
     public function register($deviceName)
     {
