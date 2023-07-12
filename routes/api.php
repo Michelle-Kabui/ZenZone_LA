@@ -8,6 +8,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\AuthMailController;
 use App\Http\Controllers\PasswordResetController;
 
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -32,3 +33,5 @@ Route::post('passwordreset', [PasswordResetController::class, 'reset']);
 
 
 Route::post('analysis', [UserController::class, 'analysis']);
+
+Route::post('journal', [UserController::class, 'journal']);

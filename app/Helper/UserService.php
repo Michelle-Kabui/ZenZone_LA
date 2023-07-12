@@ -22,13 +22,13 @@ class UserService{
     $validationRule = $auth ? 'exists:users' : 'unique:users';
 
     if ($auth) {
-        // If user is trying to login, only check that email and password are not empty
+        
         $rules = [
             'email' => ['required', 'email:rfc,dns', $validationRule],
             'password' => ['required', 'string'],
         ];
     } else {
-        // If user is trying to sign up, apply all password validation rules
+       
         $rules = [
             'email' => ['required', 'email:rfc,dns', $validationRule],
             'password' => ['required', 'string', Password::min(8)->letters()->numbers()->mixedCase()],
