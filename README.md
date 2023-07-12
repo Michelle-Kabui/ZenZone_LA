@@ -1,66 +1,119 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# ZenZone: An Application for Tracking Mental Wellness using the Differential Emotional Scale
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Table of Contents
+- [ZenZone: An Application for Tracking Mental Wellness using the Differential Emotional Scale](#zenzone-an-application-for-tracking-mental-wellness-using-the-differential-emotional-scale)
+  - [Table of Contents](#table-of-contents)
+  - [Introduction](#introduction)
+  - [Aims and Objectives](#aims-and-objectives)
+  - [Technologies](#technologies)
+  - [Setup](#setup)
+  - [Features](#features)
+  - [Privacy and Security](#privacy-and-security)
+  - [Compliance with Data Protection Regulations](#compliance-with-data-protection-regulations)
+## <u>Introduction</u>
+This project aims to develop an interactive mental wellness platform using the Object-Oriented Analysis and Design (OOAD) paradigm. It addresses the limitations of existing mental wellness applications by incorporating tested assessment tools like the Diagnostic Evaluation of Symptoms (DES) and the Self-Assessment Manikin (SAM). 
 
-## About Laravel
+The platform provides a safe space for users to express themselves through journals while tracking factors influencing their mental wellness. Using the DES, it analyzes mental wellness and suggests potential negative mental health conditions based on primary emotions. Users can also record daily mental health observations and set medication reminders. 
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Extensive research ensures the platform's effectiveness in improving mental well-being. It targets individuals seeking to enhance mental wellness, track emotions, and access support through a user-friendly interface.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Please refer to the project documentation for more information on how to use the platform.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+ 
 
-## Learning Laravel
+## <u>Aims and Objectives</u>
+The ZenZne project aims to achieve the following objectives:
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+   1. Develop an interactive mental wellness platform that empowers individuals to track and improve their mental well-being.
+   2. Incorporate established assessment tools like the Diagnostic Evaluation of Symptoms (DES) and the Self-Assessment Manikin (SAM) to provide accurate analysis of mental wellness factors.
+   3. Create a safe and supportive space for users to express themselves through digital journals, enabling them to reflect on their thoughts, emotions, and experiences.
+   4. Enable users to track and analyze the factors that influence their mental wellness, facilitating a deeper understanding of their emotional well-being.
+   5. Provide data visualization features to present mental wellness insights in a clear and intuitive manner, helping users identify trends and patterns.
+   6. Conduct extensive research to ensure the effectiveness and reliability of the platform in promoting mental well-being.
+   7. Design a user-friendly and interactive interface that fosters engagement and encourages regular usage of the application.
+   8. Target individuals seeking to enhance their mental wellness, track their emotions, and access support in a convenient and accessible manner.
+   9. Continuously improve and enhance the ZenZone platform based on user feedback and emerging advancements in mental wellness research.
+   
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## <u>Technologies</u>
+The project is created with:
+   
+   * Programming Languages: 
+      * JavaScript
+      * PHP
+      
+* Front-End Frameworks and Libraries:
+   * React-Native
+   * HTML
+   * Tailwind CSS
+   * Bootstrap
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+* Back-End Frameworks:
+   * Laravel (PHP)
 
-## Laravel Sponsors
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+* Design Methodology:   
+   * Object-Oriented Analysis and Design
+    
+* Database Management:
+     * MySQL
 
-### Premium Partners
+ * Mobile App Devolpment:
+    * Expo
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+* Server-Side Runtime Environment:
+   * Node.js
 
-## Contributing
+* Additional Tools:
+   * ngrok
+   * XAMPP
+   * Visual Studio Code
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+ ## <u>Setup</u>
+To set up the project locally, follow these steps:
 
-## Code of Conduct
+   1. Clone the repository to your local machine.  
+   2. Install the required dependecies by running `npm install` in the project directory.
+   3. Configure the database connection in the `.env` file.
+   4. Run the database migrations with the command `php artisan migrate`.
+   5. Start the development server using `npm start` or `expo start`.
+## <u>Features</u>
+The ZenZone app offers the following features:
+   * User Registration:    Create an account 
+   * Login:   
+    Login using email and password  
+    Login using fingerprint 
+   * Mood Choice:   Choose your mood from a list of mood icons.
+   * Journaling: Express yourself through digital journals and save your thoughts, emotions, and experiences.
+   * Mental Wellness Assessment: Track and analyze factors influencing your mental wellness using validated assessment tools.
+* Data Visualization: Visualize your mental wellness data with clear insights and trends.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## <u>Privacy and Security</u>
+We prioritize the privacy and security of our users' information. Here are the measures we have implemented to ensure data protection:
 
-## Security Vulnerabilities
+   1. Secure Data Encryption:   
+    We use industry-standard encryption techniques to protect user data, including data transmitted over networks (TLS/SSL) and sensitive information stored in databases (symmetric and asymmetric encryption).
+   2. Secure Authentication: 
+    Our platform implements secure authentication mechanisms, including password hashing and encryption, to ensure that only authorized users can access their accounts. We also offer optional login using fingerprint authentication for an added layer of security.
+   3. Anonymity and Confidentiality: 
+    We prioritize anonymity and confidentiality by allowing users to use pseudonyms and maintain their privacy while using the platform. Journal entries and personal data are stored securely and are only accessible by the respective user.
+   4. User Consent and Control: 
+    We respect the autonomy of our users and provide them with full control over their data. Users have the option to choose what information they want to share and can modify or delete their data at any time.
+   
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## Compliance with Data Protection Regulations</u>
+We are committed to complying with applicable data protection regulations, such as the General Data Protection Regulation (GDPR). We ensure the lawful and responsible handling of user data, including the following measures:
+1. Consent and Transparency: We obtain explicit consent from users before collecting and processing their personal data. We provide clear information about the purposes and methods of data processing, as well as the rights users have over their data.
 
-## License
+2. Data Minimization: We only collect and process the data necessary for the functioning of the ZenZone platform. We do not collect excessive or unnecessary personal information.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+3. User Control: We provide users with control over their data. Users can access, modify, and delete their personal information through their account settings.
+
+4. Third-Party Sharing: We do not share user data with third parties without explicit consent,except as required by law. 
+
+5. Data Security: We implement industry-standard security measures to protect user data from unauthorized access, loss, or alteration. This includes encryption and access controls.
+
+6. Data Retention: We retain user data only for as long as necessary to fulfill the purposes for which it was collected, unless otherwise required by law. We have defined data retention periods and regularly review and update them.
+
+By adhering to these data protection regulations, we strive to maintain the privacy and security of user data and ensure a trustworthy and responsible platform for our users.
+
