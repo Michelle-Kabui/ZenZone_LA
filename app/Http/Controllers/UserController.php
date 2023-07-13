@@ -67,6 +67,7 @@ class UserController extends Controller
     return response()->json($result);
 }
 
+
   public function journal(Request $request){
 
     $date_str = $request->date;
@@ -86,6 +87,25 @@ $formatted_date = date('Y-m-d', $timestamp);
 
     return response()->json($response);
 
+  }
+
+  public function getJournalEntries(Request $request)
+  {
+      $email = $request->route('email');
+  
+      $journalEntries = Journals::where('email', $email)->select('story', 'date', 'mood')->get();
+  
+      return response()->json($journalEntries);
+  }
+  
+
+  public function getAssessmentResults(Request $request)
+  {
+      $email = $request->route('email');
+  
+      $assessmentResults = Assessment::where('email', $email)->select('set1_mean', 'set2_mean', 'result')->get();
+  
+      return response()->json($assessmentResults);
   }
 
 

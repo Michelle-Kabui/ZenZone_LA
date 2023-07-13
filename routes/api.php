@@ -26,12 +26,10 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::post('register', [UserController::class, 'register']);
 Route::post('login', [UserController::class, 'login']);
-
 Route::post('send-mail', [UserController::class, 'send_email']);
-
 Route::post('passwordreset', [PasswordResetController::class, 'reset']);
-
-
 Route::post('analysis', [UserController::class, 'analysis']);
-
 Route::post('journal', [UserController::class, 'journal']);
+Route::get('getJournalEntries/{email}', [UserController::class, 'getJournalEntries']);
+Route::get('getAssessmentResults/{email}', [UserController::class, 'getAssessmentResults']);
+
