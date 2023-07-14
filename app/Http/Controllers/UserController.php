@@ -16,14 +16,13 @@ class UserController extends Controller
 {
     public function register(Request $request)
     {
-        $response = (new UserService($request->email, $request->password))->register($request->devicename);
+        $response = (new UserService($request->name, $request->email, $request->password))->register($request->devicename);
         return response()->json($response);
     }
 
     public function login(Request $request)
     {
-
-        $response = (new UserService($request->email, $request->password))->login($request->devicename);
+        $response = (new UserService( null, $request->email, $request->password,))->login($request->devicename);
         return response()->json($response); 
     }
 
